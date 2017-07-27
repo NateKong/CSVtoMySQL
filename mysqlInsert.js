@@ -1,5 +1,30 @@
-var table = 'groupParks';
+/********************
+Takes CSV data and imports
+it to MySQL
+********************/
+//MySQL driver
+var mysql = require('mysql');
 
+/****************************************/
+/**  INSERT DATA ONLY IN THIS AREA  **/
+var csvFile = 'example.csv';
+
+//database information
+var table = 'table';
+
+//connection to table 
+var con = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "password",
+  database: "db"
+});
+console.log("connection created");
+/****************************************/
+
+
+/********************/
+/**  CODE  **/
 function getKeys(objects){
     var keys = [];
     for (var a in objects){
@@ -9,26 +34,14 @@ function getKeys(objects){
 }
 
 function insertIntoMysql(json){
-	//mysql driver
-	var mysql = require('mysql');
-	console.log("mysql driver created");
-	
-	//connection
-	var con = mysql.createConnection({
-	  host: "localhost",
-	  user: "root",
-	  password: "nate",
-	  database: "park"
-	});
-	console.log("connection created");
 
 	//connect to MySQL and query
 	con.connect(function(err) {
 	  if (err){
-	   console.log("function can't connect");
+	   console.log("Cannot connect to database");
 	   throw err;
 	  }
-	  console.log("Connected!" + "\n");
+	  console.log("Connected to database" + "\n");
 
 	  //find number of key/values
 	  var numOfCols = Object.keys(json[0]).length;
@@ -54,20 +67,23 @@ function insertIntoMysql(json){
 	    });
 		
       }
+      console.log("Press ctrl+c after all records have been inserted");
 	});
 
 }
 
 //require the csvtojson converter class 
 var Converter = require("csvtojson").Converter;
+
 // create a new converter object
 var converter = new Converter({});
+
 // call the fromFile function which takes in the path to your 
 // csv file as well as a callback function
-converter.fromFile("parks.csv",function(err,result){
+converter.fromFile(csvFile,function(err,result){
     // if an error has occured then handle it
     if(err){
-        console.log("An Error Has Occured");
+        console.log("Cannot convert csv file");
         console.log(err);  
     } 
     
@@ -77,4 +93,4 @@ converter.fromFile("parks.csv",function(err,result){
     console.log();
     insertIntoMysql(result);
 });
-
+/********************/
