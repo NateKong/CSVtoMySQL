@@ -1,11 +1,4 @@
-Name,city,address,capacity,cost,amenities
-Amador Valley Community Park,Pleasanton,4301 Black Ave.,200,150,Horseshoes/restrooms/soccer field/ softball diamond/swimming pool/play area
-Ken Mercer Sports and Recreation Community Park,Pleasanton,5800 Parkside Dr.,200,150,baseball diamond/basketball court/restroom/skate park/soccer field/play area/volleyball court
-Val Vista Community Park,Pleasanton,7350 Johnson Dr.,250,160,baseball diamond/roller hockey rink/restroom/skate park/soccer field/play area/water play area
-Athan Downs Park,San Ramon,2975 Montevideo Dr,200,492,play area/BBQ/tennis court/restroom
-Central Park,San Ramon,12501 Alcosta Blvd,200,492,play area/water play area/BBQ/tennis court/restroom
-Rancho San Ramon Community Park,San Ramon,1998 Rancho Park Loop,100,329,baseball diamond/batting cage/soccer field/amphitheater/tennis court/play area/water play area
-Sports Park,San Ramon, 5261 Sherwood Way,50,190,baseball diamond/basketball court/soccer field
-Valley View,San Ramon,Monarch Road/Star Jasmine Drive,50,190,tennis court/restroom/play area
-Hidden Valley,San Ramon,10907 Albion Road,50,190,BBQ/baseball diamond/soccer field
-Ramona Park,San Ramon,6330 Murdock Way,50,190,BBQ/play area/bocce ball/horseshoes
+ID,Name,Address,Email
+1,Nate,123 South First Street,nate@gmail.com
+2,Jenny,456 North Second Street,jenny@gmail.com
+3,Lillian,789 West Third Street,lily@gmail.com
