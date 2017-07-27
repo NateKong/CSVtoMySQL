@@ -8,5 +8,8 @@ ___
 ___
 #### Instructions
 1. **Open** the example.csv file and model your contents accordingly
+    1. There can be no duplicates
+    1. You cannot insert duplicate data
+    1. The number of columns makes no difference
 1. **Open** the mysqlinsert.js and change/add your database information
 1. **Run** the program
